@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Droid Sans', sans-serif;
+  background: black url('assets/bg-stars.jpg') center center repeat;
+  background-size: cover;
+  color: #ff6;
+  overflow: hidden;
+}
+
+/* Startskärm */
+#start-screen {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#start-btn {
+  padding: 1em 2em;
+  font-size: 1.5em;
+  background: #222;
+  border: 2px solid #ff6;
+  color: #ff6;
+  cursor: pointer;
+}
+
+#countdown {
+  margin-top: 1em;
+  color: #4ee;
+  font-size: 1.2em;
+}
+
+/* Intro-text */
+#intro-text {
+  position: absolute;
+  width: 90vw;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6vw;
+  color: #4ee;
+  text-align: center;
+  opacity: 0;
+}
+
+/* Logotyp */
+#logo-container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 1600px;
+  opacity: 0;
+}
+
+#logo {
+  width: 100%;
+  height: auto;
+}
+
+/* Planet */
+#planet-container {
+  position: absolute;
+  bottom: -100vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+#planet {
+  width: 70vw;
+  max-width: 800px;
+  transition: all 4s ease-in;
+  opacity: 0;
+}
+
+.show-planet #planet {
+  transform: translateY(-80vh);
+  opacity: 1;
+}
+
+/* Crawl */
+#titles {
+  position: absolute;
+  bottom: 0;
+  width: 80vw;
+  max-width: 600px;
+  left: 50%;
+  transform: translateX(-50%) perspective(300px) rotateX(25deg);
+  font-size: 4vw;
+  display: none;
+  text-align: justify;
+}
+
+#titlecontent {
+  position: absolute;
+  top: 100%;
+  animation: scrollText 60s linear forwards;
+}
+
+@keyframes scrollText {
+  0% { top: 100%; opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: -200%; opacity: 0.3; filter: blur(1px); }
+}
+
+/* Final text */
+#final-text {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  text-align: center;
+  font-size: 8vw;
+  color: #ff6;
+  display: none;
+}
+
+/* Ljudknappar */
+#sound-buttons {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.sound-btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background: #222;
+  border: 2px solid #ff6;
+  color: #ff6;
+  font-size: 1em;
+}

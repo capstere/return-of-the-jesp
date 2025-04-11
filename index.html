@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Return of the JESP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="start-screen">
+    <button id="start-btn">May the JESP be with you</button>
+    <div id="countdown"></div>
+  </div>
+
+  <p id="intro-text">A long time ago,<br>in a cepheid far, far away…</p>
+
+  <div id="logo-container">
+    <img src="assets/logo.png" id="logo" alt="SPAR WARS Logo" />
+  </div>
+
+  <div id="planet-container">
+    <img src="assets/planet.png" id="planet" alt="Planet" />
+  </div>
+
+  <div id="titles">
+    <div id="titlecontent">
+      <p class="center">EPISODE REV.J<br />RETURN OF THE JESP</p>
+      <p>The Jedi Knight known only as JESP...</p>
+      <!-- fortsätt med din egen crawl-text här -->
+    </div>
+  </div>
+
+  <div id="final-text">RETURN OF THE JESP</div>
+
+  <div id="sound-buttons">
+    <button class="sound-btn" data-sound="sound1">Ljud 1</button>
+    <button class="sound-btn" data-sound="sound2">Ljud 2</button>
+    <button class="sound-btn" data-sound="sound3">Ljud 3</button>
+    <button class="sound-btn" data-sound="sound4">Ljud 4</button>
+  </div>
+
+  <audio id="music" src="assets/intro.mp3"></audio>
+  <audio id="sound1" src="assets/sound1.mp3"></audio>
+  <audio id="sound2" src="assets/sound2.mp3"></audio>
+  <audio id="sound3" src="assets/sound3.mp3"></audio>
+  <audio id="sound4" src="assets/sound4.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
